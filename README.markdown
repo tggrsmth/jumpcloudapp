@@ -2,7 +2,7 @@
 
 ## Overview
 
-To evaluate UI engineers JummpCloud would like you to build a simple single page application
+To evaluate UI engineers JumpCloud would like you to build a simple single page application
 using your choice of a modern UI framework (e.g. Angular, React, Vue) that uses our public
 API to implement standard [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 operations on users managed by a JumpCloud organization.
@@ -29,7 +29,7 @@ UI. But before you begin you'll set up just a few more things.
 3. Clone this repo, run `npm install` to install all required packages, create a .env file with the key/value
    pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8005.
 4. The web server is a simple express based app that proxies requests to`http://localhost:8005/api` to
-   `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application using
+   `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application
    using our [system users API](https://docs.jumpcloud.com/1.0/systemusers).
 5. You will be using the following [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
    API requests:
@@ -52,7 +52,7 @@ Let's move on to the requirements for this assignment.
 
 ## Requirements
 
-In your GitHub account, create a new repo, and in that repo create a single page application can do
+In your GitHub account, create a new repo, and in that repo create a single page application that can do
 the following:
 
 1. List the users in your JumpCloud organization\*.
