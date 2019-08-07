@@ -15,11 +15,11 @@ operations on users managed by a JumpCloud organization.
 3. Notice that the new user is displayed in the Main Panel.
 4. Click the row in the Main Panel and change the user's first name, last name, user name, or email
    address and click save. Notice the changes are displayed in the Main Panel.
-5. Click the checkbox in the left column to select the user. Notice the the Action Buttons in the
+5. Click the checkbox in the left column to select the user. Notice the Action Buttons in the
    upper right of the table are activated. Delete the user and notice the user no longer appears in
    the Main Panel.
 
-Cogratulations! You have just explored the the CRUD operations that can be performed from the JumpCloud
+Congratulations! You have just explored the CRUD operations that can be performed from the JumpCloud
 UI. But before you begin you'll set up just a few more things.
 
 1. Click on your user name in the upper right and select API settings from the drop down.
@@ -70,6 +70,6 @@ And feel free to use any modern CSS framework if you want to.
 When you're done, please send us a link to your repo so we can clone it locally and test out
 your UI.
 
-We're excited to see what you build. And thanks for your intersted in JumpCloud.
+We're excited to see what you build. And thanks for your interest in JumpCloud.
 
 _* Free accounts are limited to 10 users. Which is good news since you don't need to worry about pagination._
