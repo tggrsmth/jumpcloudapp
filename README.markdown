@@ -27,8 +27,8 @@ UI. But before you begin you'll set up just a few more things.
 2. Copy your API key. You will be passing it to the server side application we've set up for you in this repo.
    ![API Key](api-key.png)
 3. Clone this repo, run `npm install` to install all required packages, create a .env file with the key/value
-   pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8004.
-4. The web server is a simple express based app that proxies requests to`http://localhost:8004/api` to
+   pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8005.
+4. The web server is a simple express based app that proxies requests to`http://localhost:8005/api` to
    `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application using
    using our [system users API](https://docs.jumpcloud.com/1.0/systemusers).
 5. You will be using the following [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
@@ -42,7 +42,7 @@ UI. But before you begin you'll set up just a few more things.
    ```
 6. Go ahead and try it out using [`curl`](https://curl.haxx.se/) from the command line.
    ```shell
-   curl -s -v 'http://localhost:8004/api/systemusers'
+   curl -s -v 'http://localhost:8005/api/systemusers'
    ```
 7. Now using the API we've provided, and your free account at [jumpcloud.com](http://www.jumpcloud.com),
    you're ready to build a simple single page application that allows CRUD operations on system users in
