@@ -28,7 +28,7 @@ UI. But before you begin you'll set up just a few more things.
    ![API Key](api-key.png)
 3. Clone this repo, run `npm install` to install all required packages, create a .env file with the key/value
    pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8005.
-4. The web server is a simple express based app that proxies requests to`http://localhost:8005/api` to
+4. The web server is a simple express based app that proxies requests from `http://localhost:8005/api` to
    `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application
    using our [system users API](https://docs.jumpcloud.com/1.0/systemusers).
 5. You will be using the following [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
@@ -37,7 +37,7 @@ UI. But before you begin you'll set up just a few more things.
    GET /api/systemusers
    GET /api/systemusers/{id}
    POST /api//systemusers
-   PUT /api//systemusers/{id}
+   PUT /api/systemusers/{id}
    DELETE /api/systemusers/{id}
    ```
 6. Go ahead and try it out using [`curl`](https://curl.haxx.se/) from the command line.
@@ -59,9 +59,7 @@ the following:
 2. Create a new user.
 3. Update an existing user.
 4. Delete a user.
-5. Look pretty and be easy to use.
-
-That's it.
+5. Be intuitive and have a clean user experience.
 
 Feel free to use any modern application generator such as [Angular CLI](https://cli.angular.io/),
 [Create React App](https://facebook.github.io/create-react-app/), [Vue CLI](https://cli.vuejs.org/), etc.
@@ -71,5 +69,3 @@ When you're done, please send us a link to your repo so we can clone it locally 
 your UI.
 
 We're excited to see what you build. And thanks for your interest in JumpCloud.
-
-_* Free accounts are limited to 10 users. Which is good news since you don't need to worry about pagination._
