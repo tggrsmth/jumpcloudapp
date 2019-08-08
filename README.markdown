@@ -55,7 +55,7 @@ Let's move on to the requirements for this assignment.
 In your GitHub account, create a new repo, and in that repo create a single page application that can do
 the following:
 
-1. List the users in your JumpCloud organization\*.
+1. List the users in your JumpCloud organization.
 2. Create a new user.
 3. Update an existing user.
 4. Delete a user.
