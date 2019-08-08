@@ -2,15 +2,15 @@
 
 ## Overview
 
-To evaluate UI engineers JumpCloud would like you to build a simple single page application
+To evaluate UI engineers, JumpCloud would like you to build a simple single page application
 using your choice of a modern UI framework (e.g. Angular, React, Vue) that uses our public
 API to implement standard [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 operations on users managed by a JumpCloud organization.
 
 ## Instructions
 
-1. Go to http://www.jumpcloud.com, sign up for a free account, and activate it.
-2. After signing in navigate to the Users page and create a new user in the UI. The User Information
+1. Go to https://www.jumpcloud.com, sign up for a free account, and activate it.
+2. After signing in, navigate to the Users page and create a new user in the UI. The User Information
    section contains the only required fields which are indicated with an asterisk.
 3. Notice that the new user is displayed in the Main Panel.
 4. Click the row in the Main Panel and change the user's first name, last name, user name, or email
@@ -26,7 +26,7 @@ UI. But before you begin you'll set up just a few more things.
    ![API Settings](api-settings-dropdown.png)
 2. Copy your API key. You will be passing it to the server side application we've set up for you in this repo.
    ![API Key](api-key.png)
-3. Clone this repo, run `npm install` to install all required packages, create a .env file with the key/value
+3. Clone this repo, run `npm install` to install all required packages, create a `.env` file with the key/value
    pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8005.
 4. The web server is a simple express based app that proxies requests from `http://localhost:8005/api` to
    `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application
