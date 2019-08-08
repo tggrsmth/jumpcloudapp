@@ -16,11 +16,12 @@ operations on users managed by a JumpCloud organization.
 4. Click the row in the Main Panel and change the user's first name, last name, user name, or email
    address and click save. Notice the changes are displayed in the Main Panel.
 5. Click the checkbox in the left column to select the user. Notice the Action Buttons in the
-   upper right of the table are activated. Delete the user and notice the user no longer appears in
+   upper right of the table are activated.
+6. Click the delete button when the user is selected. Notice the user no longer appears in
    the Main Panel.
 
 Congratulations! You have just explored the CRUD operations that can be performed from the JumpCloud
-UI. But before you begin you'll set up just a few more things.
+UI. But before you begin you'll set up just a few more things:
 
 1. Click on your user name in the upper right and select API settings from the drop down.
    ![API Settings](api-settings-dropdown.png)
