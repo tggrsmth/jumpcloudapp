@@ -36,7 +36,7 @@ UI. But before you begin you'll set up just a few more things.
    ```http
    GET /api/systemusers
    GET /api/systemusers/{id}
-   POST /api//systemusers
+   POST /api/systemusers
    PUT /api/systemusers/{id}
    DELETE /api/systemusers/{id}
    ```
