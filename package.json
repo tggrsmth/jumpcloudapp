@@ -12,7 +12,7 @@
     "url": "https://github.com/TheJumpCloud/jumpcloud-ui-assignment/issues"
   },
   "scripts": {
-    "start:server": "node server/server.js"
+    "start": "node server/server.js"
   },
   "engines": {
     "node": "10.16.2",

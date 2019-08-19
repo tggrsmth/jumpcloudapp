@@ -28,7 +28,7 @@ UI. But before you begin you'll set up just a few more things:
 2. Copy your API key. You will be passing it to the server side application we've set up for you in this repo.
    ![API Key](api-key.png)
 3. Clone this repo, run `npm install` to install all required packages, create a `.env` file with the key/value
-   pair `API_KEY=YOUR_API_KEY` and then run `npm run start:server` to start the web server on port 8005.
+   pair `API_KEY=YOUR_API_KEY` and then run `npm start` to start the web server on port 8005.
 4. The web server is a simple express based app that proxies requests from `http://localhost:8005/api` to
    `https://console.jumpcloud.com/api` so that you can build a simple single page CRUD application
    using our [system users API](https://docs.jumpcloud.com/1.0/systemusers).
