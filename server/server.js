@@ -7,6 +7,7 @@ const PORT = 8005;
 dotenv.config();
 
 const API_KEY = process.env.API_KEY;
+const HOST = process.env.HOST || 'https://console.jumpcloud.com';
 
 app.use(function(req, res, next) {
   const origin = req.headers.origin;
@@ -26,7 +27,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/api', proxy({
-  target: 'https://console.jumpcloud.com',
+  target: HOST,
   changeOrigin: true,
   headers: {
     'x-api-key': API_KEY,
