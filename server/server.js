@@ -1,15 +1,15 @@
+const { createProxyMiddleware }  = require('http-proxy-middleware');
 const URL = require('url').URL;
+const chalk = require('chalk');
 const dotenv = require('dotenv');
 const express = require('express');
-const proxy = require('http-proxy-middleware');
 
 const app = express();
 const PORT = 8005;
 
 dotenv.config();
 
-const API_KEY = process.env.API_KEY;
-const HOST = process.env.HOST;
+const { API_KEY, HOST } = process.env;
 
 try {
   new URL(HOST);
@@ -38,13 +38,29 @@ app.use(function(req, res, next) {
   return next();
 });
 
-app.use('/api', proxy({
+const handleError = (err, req, resp) => {
+  const host = req.headers && req.headers.host;
+  const code = err.code;
+
+  if (code === 'SELF_SIGNED_CERT_IN_CHAIN') {
+    console.error(`${chalk.red('WARNING:')} You will need to specify the NODE_EXTRA_CA_CERTS env var when running the proxy against a host with a self signed certificate!`);
+    console.error(`${chalk.yellow('USAGE:')} NODE_EXTRA_CA_CERTS=/path/to/jumpcloud-workstation/pki/certs/ca.crt npm run start`);
+  }
+
+  resp.writeHead(500);
+  resp.end(`Error occured while trying to proxy to: ${host} ${req.url}. Error: ${code}\n`);
+};
+
+const proxy = createProxyMiddleware({
   target: HOST,
   changeOrigin: true,
   headers: {
     'x-api-key': API_KEY,
   },
-}));
+  onError: handleError,
+});
+
+app.use('/api', proxy);
 
 app.listen(PORT, function() {
   console.log('Server started on port ' + PORT);
