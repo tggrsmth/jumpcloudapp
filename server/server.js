@@ -1,15 +1,14 @@
 const URL = require('url').URL;
 const dotenv = require('dotenv');
 const express = require('express');
-const proxy = require('http-proxy-middleware');
+const { createProxyMiddleware }  = require('http-proxy-middleware');
 
 const app = express();
 const PORT = 8005;
 
 dotenv.config();
 
-const API_KEY = process.env.API_KEY;
-const HOST = process.env.HOST;
+const { API_KEY, HOST } = process.env;
 
 try {
   new URL(HOST);
@@ -38,13 +37,15 @@ app.use(function(req, res, next) {
   return next();
 });
 
-app.use('/api', proxy({
+const proxy = createProxyMiddleware({
   target: HOST,
   changeOrigin: true,
   headers: {
     'x-api-key': API_KEY,
   },
-}));
+});
+
+app.use('/api', proxy);
 
 app.listen(PORT, function() {
   console.log('Server started on port ' + PORT);
